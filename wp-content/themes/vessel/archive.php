@@ -71,7 +71,7 @@
 					</footer>
 
 				</article>
-
+			<hr class='border-color-gray' />
 			<?php endwhile; ?>
 
 			<?php else : ?>
