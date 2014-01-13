@@ -17,7 +17,7 @@
 
                             <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
                                 <header class="article-header">
-                                    <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
                                     <p class="byline vcard"><?php
                                         printf( __( '<time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link());
                                     ?></p>
@@ -29,7 +29,7 @@
                                     <?php the_hashtags(); ?>
                                 </footer>
                             </article>
-
+                            <hr class='border-color-gray' />
                         <?php endwhile; ?>
                     </div>
                 </div>

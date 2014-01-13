@@ -13,7 +13,7 @@
                 <header class="article-header">
                     <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
                     <p class="byline vcard"><?php
-                        printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link() );
+                        printf( __( '<time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link() );
                     ?></p>
                 </header>
                 <section class="entry-content clearfix" itemprop="articleBody">
@@ -22,7 +22,20 @@
                 <footer class="article-footer">
                     <?php the_hashtags(); ?>
                 </footer>
-                <div class='margin-top-50'>
+                <div class='row margin-top-25'>
+                    <div class='col-xs-6 col-sm-6 col-md-6 text-left'>
+                        <a href='<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>' title="Previous Post">
+                            <span class='glyphicon glyphicon-arrow-left'></span> Previous
+                        </a>
+                    </div>
+                    <div class='col-xs-6 col-sm-6 col-md-6 text-right'>
+                        <a href='<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>' title="Next Post">
+                            Next <span class='glyphicon glyphicon-arrow-right'></span> 
+                        </a>
+                    </div>
+                </div>
+                <hr class='border-color-gray margin-top-25 margin-bottom-25'>
+                <div>
                     <?php comments_template(); ?>
                 </div>
             </article>
