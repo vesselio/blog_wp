@@ -171,13 +171,24 @@ function bones_comments( $comment, $args, $depth ) {
 
 // Search Form
 function bones_wpsearch($form) {
-	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-	<label class="screen-reader-text" for="s">' . __( 'Search for:', 'bonestheme' ) . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . esc_attr__( 'Search the Site...', 'bonestheme' ) . '" />
-	<input type="submit" id="searchsubmit" value="' . esc_attr__( 'Search' ) .'" />
+	$form = 
+	'<form role="search" method="get" id="searchform" class="form-horizontal" action="' . home_url( '/' ) . '" >
+	<div class="form-group">
+	<input type="text" value="' . get_search_query() . '" class="form-control" name="s" id="s" placeholder="' . esc_attr__( 'Search the Site...', 'bonestheme' ) . '" />
+	</div>
+	<div class="form-group">
+	<input type="submit" id="searchsubmit" class="btn btn-default" value="' . esc_attr__( 'Search' ) .'" />
+	</div>
 	</form>';
 	return $form;
 } // don't remove this bracket!
 
-
+function the_hashtags(){
+	if( $tags = get_the_tags() ) {
+        foreach( $tags as $tag ) {
+            $sep = ( $tag === end( $tags ) ) ? '' : ', ';
+            echo '<a href="' . get_term_link( $tag, $tag->taxonomy ) . '">#' . $tag->name . '</a>' . $sep;
+        }
+    }
+}
 ?>
