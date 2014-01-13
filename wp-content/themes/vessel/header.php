@@ -64,10 +64,13 @@
                                     <a href="https://www.vessel.io/features">Features</a>
                                 </li>
                                 <li>
-                                <a href="https://www.vessel.io/pricing">Pricing</a>
-                            </li>
+                                    <a href="https://www.vessel.io/pricing">Pricing</a>
+                                </li>
                                 <li>
                                     <a href="docs.vessel.io">Docs</a>
+                                </li>
+                                <li>
+                                    <a href='http://blog.vessel.io/'>Blog</a>
                                 </li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right nav-ctas hidden-xs">
