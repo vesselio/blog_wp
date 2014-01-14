@@ -23,7 +23,7 @@
                                     ?></p>
                                 </header>
                                 <section class="entry-content clearfix">
-                                    <?php the_excerpt(); ?>
+                                    <?php the_content(); ?>
                                 </section>
                                 <footer class="article-footer">
                                     <?php the_hashtags(); ?>
