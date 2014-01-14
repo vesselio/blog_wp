@@ -37,11 +37,9 @@
                 <div class='row margin-top-25'>
                     <div class='col-xs-6 col-sm-6 col-md-6 text-left'>
                         <?php next_posts_link( __( '&laquo; Older Entries', 'bonestheme' )) ?>
-                        <!-- <a href='' title="Previous Post:"><span class='glyphicon glyphicon-arrow-left'></span> Previous</a> -->
                     </div>
                     <div class='col-xs-6 col-sm-6 col-md-6 text-right'>
                         <?php previous_posts_link( __( 'Newer Entries &raquo;', 'bonestheme' )) ?>
-                        <!-- <a href='' title="Next Post: ">Next <span class='glyphicon glyphicon-arrow-right'></span></a> -->
                     </div>
                 </div>
 
