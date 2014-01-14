@@ -124,18 +124,12 @@ SCRIPTS & ENQUEUEING
 function bones_scripts_and_styles() {
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 	if (!is_admin()) {
-
+		
 		// modernizr (without media query polyfill)
 		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
-		// register main stylesheet
-		// wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
-
 		// register Vessel stylesheet
 		wp_register_style( 'style_vessel', get_stylesheet_directory_uri() . '/library/css/style_vessel.css', array(), '', 'all' );
-
-		// ie-only style sheet
-		// wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
 		// comment reply script for threaded comments
 		if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -143,22 +137,22 @@ function bones_scripts_and_styles() {
 		}
 
 		//adding scripts file in the footer
-		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery', 'jquery_fitvids'), '', true );
+
+		// FitVid.js script
+		wp_register_script( 'jquery_fitvids', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fitvids.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
-		// wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'style_vessel' );
-		// wp_enqueue_style( 'bones-ie-only' );
-
-		// $wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
-
+		
 		/*
 		I recommend using a plugin to call jQuery
 		using the google cdn. That way it stays cached
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script( 'jquery_fitvids' );
 		wp_enqueue_script( 'bones-js' );
 
 	}

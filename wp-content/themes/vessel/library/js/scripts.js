@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
 	
 	// add all your scripts here
 	
- 
+ 	$('iframe').fitvid();
 }); /* end of as page load scripts */
 
 
