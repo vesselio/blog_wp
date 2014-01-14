@@ -69,7 +69,7 @@
                                 <li>
                                     <a href="http://docs.vessel.io">Docs</a>
                                 </li>
-                                <li>
+                                <li class='active'>
                                     <a href='http://blog.vessel.io/'>Blog</a>
                                 </li>
                             </ul>
