@@ -15,7 +15,7 @@
                                     <a href="http://docs.vessel.io">Docs</a>
                                 </li>
                                 <li>
-                                    <a target='_blank' href='http://blog.vessel.io/'>Blog</a>
+                                    <a href='http://blog.vessel.io/'>Blog</a>
                                 </li>
                             </ul>
                         </div>
