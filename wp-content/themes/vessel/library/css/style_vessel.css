@@ -4910,6 +4910,7 @@ img {
   max-width: 100%; }
 
 article section img {
+  width: auto;
   max-width: 100%;
   height: auto; }
 
