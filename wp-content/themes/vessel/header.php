@@ -67,7 +67,7 @@
                                     <a href="https://www.vessel.io/pricing">Pricing</a>
                                 </li>
                                 <li>
-                                    <a href="docs.vessel.io">Docs</a>
+                                    <a href="http://docs.vessel.io">Docs</a>
                                 </li>
                                 <li>
                                     <a href='http://blog.vessel.io/'>Blog</a>

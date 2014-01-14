@@ -32,7 +32,7 @@
 								</footer>
 
 							</article>
-
+							
 							<?php endwhile; ?>
 
 									<?php if ( function_exists( 'bones_page_navi' ) ) { ?>
