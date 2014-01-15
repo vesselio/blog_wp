@@ -1,3 +1,11 @@
+.article-header{
+    a,
+    h1,
+    h2{
+        color: $gray-darker;
+        margin-top: 0px;
+    }
+}
 .eyebrow{
   margin-bottom: $line-height-computed;
   font-size: ($font-size-base * 1.1);

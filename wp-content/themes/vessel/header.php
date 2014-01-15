@@ -11,7 +11,7 @@
         <?php // Google Chrome Frame for IE ?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title><?php wp_title(''); ?></title>
+        <title><?php bloginfo('name'); ?><?php wp_title(" | ",true); ?></title>
 
         <?php // mobile meta (hooray!) ?>
         <meta name="HandheldFriendly" content="True">
@@ -38,7 +38,6 @@
 
     <body <?php body_class(); ?>>
         <div class='wrapper'>
-            <?php # bones_main_nav(); ?>
             <header>
                 <nav class="navbar navbar-default hero" role="navigation">
                     <div class='container'>
@@ -49,10 +48,6 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <div class='visible-xs pull-right mobile-auth-btns'>
-                                <a href="https://www.vessel.io/accounts/login/" class='btn btn-default'>Sign In</a>
-                                <a href="https://www.vessel.io/accounts/register/" class='btn btn-primary'>Sign Up</a>
-                            </div>
                             <a class="navbar-brand" href="https://www.vessel.io/">
                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/vessel-logo-2x.png" width='34' height='30' />
                             </a>
@@ -60,26 +55,14 @@
 
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-left">
-                                <li>
-                                    <a href="https://www.vessel.io/features">Features</a>
+                                <li class='active' style='margin-left:25px;'>
+                                    <a href="<?php echo home_url(); ?>">Blog</a>
                                 </li>
-                                <li>
-                                    <a href="https://www.vessel.io/pricing">Pricing</a>
-                                </li>
-                                <li>
-                                    <a href="http://docs.vessel.io">Docs</a>
-                                </li>
-                                <li class='active'>
-                                    <a href='http://blog.vessel.io/'>Blog</a>
-                                </li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right nav-ctas hidden-xs">
-                                <li>
-                                    <a href="https://www.vessel.io/accounts/login/" class='btn btn-default' data-gatrackevent="true" data-gaeventtype='click' data-gacategory="header" data-galabel='signin'>Sign In</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.vessel.io/accounts/register/" class='btn btn-primary' data-gatrackevent="true" data-gaeventtype='click' data-gacategory="header" data-galabel='signup'>Sign Up</a>
-                                </li>
+                                <p class="navbar-text">
+                                    <em>
+                                        The mobile growth blog.
+                                    </em>
+                                </p>
                             </ul>
                         </div>
                     </div>
